@@ -62,6 +62,20 @@ For `hosts_to_services` each object should have:
 | path      | The path for the Ingress rule.                                              | String   |
 | namespace | The namespace in which the Ingress should be created.                        | String   |
 
+Certainly! You can create (or update) a `README.md` file to include this information. Here's a suggested entry for your `README.md`:
+
+---
+
+
+### Output
+
+The combined ingress configurations are written to a file named `all_ingress_output.yaml` located in the module's directory.
+
+To view the contents of the generated file, you can check the Terraform output using:
+
+```
+terraform output all_ingress_output_yaml
+```
 
 
 ## Notes

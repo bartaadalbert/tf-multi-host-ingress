@@ -3,7 +3,8 @@ locals {
   all_yaml_outputs = join("\n---\n", [for i in kubectl_manifest.multi_host_ingress : i.yaml_body])
 }
 
-resource "local_file" "output_yaml" {
+resource "local_file" "all_ingress_output_yaml" {
+  depends_on = [kubectl_manifest.multi_host_ingress]
   content  = local.all_yaml_outputs
   filename = "${path.module}/all_ingress_output.yaml"
 }
