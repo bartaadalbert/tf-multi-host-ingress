@@ -1,4 +1,4 @@
-Certainly! It seems you want to add an `ExternalName` service that points to an existing service in another namespace. The `ExternalName` 
+If you want to add an `ExternalName` service that points to an existing service in another namespace. The `ExternalName` 
 1. **Terraform Code**:
     - Create a Terraform resource for the `ExternalName` service.
     

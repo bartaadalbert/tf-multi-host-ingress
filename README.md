@@ -37,10 +37,10 @@ module "multi_host_ingress" {
       namespace = "default"
     }
   ]
-  annotations = {
-    "kubernetes.io/ingress.class" = "traefik"
-    # ... add more annotations if needed
-  }
+  annotations = <<-EOT
+  kubernetes.io/ingress.class: "traefik"
+  cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  EOT
 }
 ```
 
@@ -84,3 +84,8 @@ terraform output all_ingress_output_yaml
 - Modify the default annotations as per your Ingress controller and requirements.
 
 
+## Contributing
+
+If you encounter issues or have suggestions for improvements, please open an issue or submit a pull request. Your contributions are welcome!
+
+Modify this draft to align with your project's specific details and requirements, and make sure to update the source URL to match your actual Terraform module's repository location.
