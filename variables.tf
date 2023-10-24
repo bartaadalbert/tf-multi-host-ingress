@@ -29,5 +29,6 @@ variable "annotations" {
   traefik.ingress.kubernetes.io/affinity: "true"
   traefik.ingress.kubernetes.io/frontend-entry-points: http,https
   traefik.ingress.kubernetes.io/redirect-entry-point: https
+  traefik.ingress.kubernetes.io/router.entrypoints: websecure
   EOT
 }
