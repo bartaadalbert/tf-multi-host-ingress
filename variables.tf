@@ -14,17 +14,7 @@ variable "hosts_to_services" {
     namespace = string
     path_type = string
   }))
-  default = [
-    {
-      host      = "margo.nunapo.com"
-      service   = "webthecars-helm"
-      port      = 8000
-      path      = "/"
-      namespace = "thecars-net"
-      path_type = "Prefix"
-    },
-
-  ]
+  default = []
 }
 
 variable "annotations" {
